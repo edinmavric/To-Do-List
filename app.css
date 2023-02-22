@@ -6,13 +6,26 @@ body {
   padding: 0;
   margin: 0;
   color: white;
-  background-color: greenyellow;
+  background-color: #4FC9E8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #52F2E8;
+  width: 50%;
+  border-radius: 32px;
+  margin-top: 30px;
+}
+header {
+  background-color: #56dbad50;
+  border-radius: 32px;
+  margin: 20px;
+  padding: 6px 32px;
 }
 header h1 {
   font-size: 4rem;
@@ -23,27 +36,29 @@ header h1 {
 .todo-input input {
   height: 40px;
   width: 400px;
-  border-radius: 32px;
+  border-radius: 20px;
   border: none;
   font-size: 24px;
   color: black;
+  text-align: center;
 }
-.todo-input button {
+.todo-button button {
   height: 40px;
-  width: 40px;
-  border-radius: 32px;
+  width: 120px;
+  border-radius: 20px;
   border: none;
   background-color: white;
   color: grey;
+  margin-top: 14px;
   transition: 0.2s;
 }
-.todo-input button:hover {
-  color: white;
-  background-color: grey;
-  transition: 0.3s;
+input:focus{
+  outline: none;
 }
-.todo-input button .fa-plus {
-  font-size: 18px;
+.todo-button button:hover {
+  color: white;
+  background-color: #40EB49;
+  transition: 0.3s;
 }
 .todo-list {
   display: flex;
@@ -55,7 +70,8 @@ header h1 {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-top: 32px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 .todo-list ul li {
   cursor: pointer;
@@ -68,7 +84,7 @@ header h1 {
   margin: 6px;
 }
 .todo-list ul li.checked {
-  background: gray;
+  background: #4FE85C;
   color: black;
   text-decoration: line-through;
   transition: 0.2s;

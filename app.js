@@ -31,7 +31,7 @@ const newTodo = () => {
     } else {
         list.appendChild(li);
     }
-    input = "";
+    input.value = "";
 
   li.addEventListener("click", function () {
     li.classList.toggle("clickable-list");
@@ -45,8 +45,10 @@ const newTodo = () => {
 
   for (i = 0; i < closeBtn.length; i++) {
     closeBtn[i].onclick = function () {
-      let div = this.parentElement;
-      div.style.display = "none";
+      if (confirm("Are you sure you want to delete this task?") == true) {
+        let div = this.parentElement;
+        div.style.display = "none";
+      }
     };
   }
 };
