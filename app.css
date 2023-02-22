@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  background-color: greenyellow;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header h1 {
+  font-size: 4rem;
+}
+.todo-input {
+  padding: 0;
+}
+.todo-input input {
+  height: 40px;
+  width: 400px;
+  border-radius: 32px;
+  border: none;
+  font-size: 24px;
+  color: black;
+}
+.todo-input button {
+  height: 40px;
+  width: 40px;
+  border-radius: 32px;
+  border: none;
+  background-color: white;
+  color: grey;
+  transition: 0.2s;
+}
+.todo-input button:hover {
+  color: white;
+  background-color: grey;
+  transition: 0.3s;
+}
+.todo-input button .fa-plus {
+  font-size: 18px;
+}
+.todo-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.todo-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 32px;
+}
+.todo-list ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 20px;
+  background: white;
+  color: black;
+  font-size: 18px;
+  width: 300px;
+  margin: 6px;
+}
+.todo-list ul li.checked {
+  background: gray;
+  color: black;
+  text-decoration: line-through;
+  transition: 0.2s;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px;
+  border: 1px solid red;
+  color: red;
+  background-color: white;
+}
+.close:hover {
+  background-color: red;
+  color: white;
+}
