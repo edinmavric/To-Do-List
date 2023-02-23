@@ -6,17 +6,18 @@ body {
   padding: 0;
   margin: 0;
   color: white;
-  background-color: #4FC9E8;
+  background-color: #4fc9e8;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #52F2E8;
+  background-color: #52f2e8;
   width: 50%;
   border-radius: 32px;
   margin-top: 30px;
@@ -50,14 +51,15 @@ header h1 {
   background-color: white;
   color: grey;
   margin-top: 14px;
+  margin-bottom: 18px;
   transition: 0.2s;
 }
-input:focus{
+input:focus {
   outline: none;
 }
 .todo-button button:hover {
   color: white;
-  background-color: #40EB49;
+  background-color: #40eb49;
   transition: 0.3s;
 }
 .todo-list {
@@ -65,10 +67,12 @@ input:focus{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 30px;
+  border-radius: 20px;
 }
 .todo-list ul {
   margin: 0;
-  padding: 0;
+  padding: 30px;
   list-style: none;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -82,9 +86,10 @@ input:focus{
   font-size: 18px;
   width: 300px;
   margin: 6px;
+  border-radius: 8px;
 }
 .todo-list ul li.checked {
-  background: #4FE85C;
+  background: #4fe85c;
   color: black;
   text-decoration: line-through;
   transition: 0.2s;
