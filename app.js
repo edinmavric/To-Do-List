@@ -6,6 +6,10 @@ let closeBtn = document.getElementsByClassName("close");
 
 let toDoList = document.querySelector(".todo-list");
 
+function reset() {
+  document.querySelector("input").value = null;
+}
+
 for (let i = 0; i < listLis.length; i++) {
   let x = document.createElement("span");
   let text = document.createTextNode("x");
@@ -33,9 +37,10 @@ const newTodo = () => {
   } else {
     list.appendChild(li);
     toDoList.style.backgroundColor = "#52f2e8";
-    input = "";
   }
 
+  input = "";
+  
   li.addEventListener("click", function () {
     li.classList.toggle("clickable-list");
   });
@@ -48,16 +53,16 @@ const newTodo = () => {
 
   for (i = 0; i < closeBtn.length; i++) {
     closeBtn[i].onclick = function () {
-      if (confirm("Are you sure you want to delete this task?") == true) {
+      if (confirm("Are you sure you are done with this task?") == true) {
         let div = this.parentElement;
         div.style.display = "none";
-        input = "";
       }
     };
   }
 };
 
 addBtn.addEventListener("click", newTodo);
+addBtn.addEventListener("click", reset);
 listUl.addEventListener(
   "click",
   function (event) {
