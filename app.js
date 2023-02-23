@@ -36,11 +36,9 @@ const newTodo = () => {
     alert("Don't skip tasks!");
   } else {
     list.appendChild(li);
-    toDoList.style.backgroundColor = "#52f2e8";
+    list.style.backgroundColor = "#52f2e8";
   }
 
-  input = "";
-  
   li.addEventListener("click", function () {
     li.classList.toggle("clickable-list");
   });
@@ -53,7 +51,7 @@ const newTodo = () => {
 
   for (i = 0; i < closeBtn.length; i++) {
     closeBtn[i].onclick = function () {
-      if (confirm("Are you sure you are done with this task?") == true) {
+      if (confirm(`Are you sure you are done with this task?`) == true) {
         let div = this.parentElement;
         div.style.display = "none";
       }
@@ -65,7 +63,7 @@ addBtn.addEventListener("click", newTodo);
 addBtn.addEventListener("click", reset);
 listUl.addEventListener(
   "click",
-  function (event) {
+  (event) => {
     if (event.target.tagName === "LI") {
       event.target.classList.toggle("checked");
     }

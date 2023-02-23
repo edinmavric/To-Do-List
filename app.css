@@ -76,6 +76,7 @@ input:focus {
   list-style: none;
   margin-top: 12px;
   margin-bottom: 12px;
+  border-radius: 20px;
 }
 .todo-list ul li {
   cursor: pointer;
@@ -87,6 +88,7 @@ input:focus {
   width: 300px;
   margin: 6px;
   border-radius: 8px;
+  animation: myAnim 1s ease 0s 1 normal forwards;
 }
 .todo-list ul li.checked {
   background: #4fe85c;
@@ -106,4 +108,18 @@ input:focus {
 .close:hover {
   background-color: red;
   color: white;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(0.2);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
