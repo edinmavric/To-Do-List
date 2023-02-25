@@ -44,7 +44,7 @@ const newTodo = () => {
   });
 
   let x = document.createElement("span");
-  let text = document.createTextNode("x");
+  let text = document.createTextNode("Delete");
   x.className = "close";
   x.appendChild(text);
   li.appendChild(x);
